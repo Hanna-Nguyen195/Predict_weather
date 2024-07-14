@@ -1,0 +1,41 @@
+<!-- templates/weather/index.html -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <link rel = "stylesheet" type="text/css" href="{%static 'weather/template.css' %}">
+    <link rel = "icon" type="images/png" href="{%static 'weather/images/search_icon.png' %}">
+</head>
+<body>
+    <div id = "div1">
+        <p id = 'h1'>Weather Forecast</p>
+    </div>
+    <form method="post" action="{% url 'weather'%} ">
+        {% csrf_token %}
+        <br><br>
+        <div class="card">
+            <div class="search">
+                <label for = "city"  >Select a city </label>
+                <select name="city" id="option" > 
+                    {% for city in cities %}
+                        <option value=" {{ city }}">{{ city }}</option>
+                     {% endfor %}
+                </select>
+                <button id = "icon_search"><img src="{%static 'weather/images/icon_search.png' %}" ></button>
+            </div>
+        </div>
+    </form>
+    {% if weather_data%}
+        <img src="http://openweathermap.org/img/w/{{ weather_data.icon }}.png" alt="Weather icon" id = "icon">
+        <p id="tem">{{weather_data.temperature}}</p>
+        {% for d in daily %}
+            <h3>{{d.day}}</h3>
+        {% endfor %}
+    {%endif%}
+    {% if error %}
+        
+        <p>Error {{error}}</p>
+    {%endif%}
+</body>
+</html>

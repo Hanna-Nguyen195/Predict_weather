@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+#div1{
+    display: flex; /* tao cai flexbox de thu nho trang */
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    background-color: lightgray ;
+
+}
+#h1{
+    font-family: Arial, sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+    background-color:brown;
+    padding: 20px;
+    border-radius: 30px;
+    color:aliceblue ;
+}
+.card{
+    display: flexbox;
+    width: 100%;
+    max-width: 600px;
+    background: linear-gradient(135deg,#00feba,#5b548a);
+    color: #fff;
+    margin: 50px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+    font-size: 25px;
+}
+#option{
+    width: 200px; /* Đặt chiều rộng của hộp select */
+    height: 40px; /* Đặt chiều cao của hộp select */
+    font-size: 16px; /* Đặt kích thước font của các tùy chọn */
+    padding: 5px; /* Đặt khoảng đệm bên trong hộp select */
+    border: 1px solid #ccc; /* Đặt viền cho hộp select */
+    border-radius: 4px; /* Đặt bo góc cho hộp select */
+    border-color: black;
+}
+.search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    size: 50px;
+}
+.search input{
+    border: 0;
+    outline: 0;
+    background #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius:  40px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+
